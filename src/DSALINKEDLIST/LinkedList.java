@@ -59,6 +59,8 @@ public class LinkedList {
         secondLast.next = null;
     }
 
+    
+
     public void print() {
         if (head == null) {
             System.out.println("List is empty");
