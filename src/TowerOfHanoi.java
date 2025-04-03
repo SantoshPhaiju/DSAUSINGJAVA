@@ -21,7 +21,7 @@ class TowerOfHanoi {
     }
 
     public static void main(String[] args) {
-        int n = 25; // Number of disks
+        int n = 3; // Number of disks
         solveHanoi(n, 'A', 'B', 'C'); // A = Source, B = Auxiliary, C = Destination
         System.out.println("Steps taken " + steps);
     }
