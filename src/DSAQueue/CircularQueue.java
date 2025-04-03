@@ -1,8 +1,11 @@
 package DSAQueue;
 
 public class CircularQueue {
-    private int[] arr;
-    private int front, rear, size, maxSize;
+    private final int[] arr;
+    private int front;
+    private int rear;
+    private int size;
+    private final int maxSize;
 
     public CircularQueue(int maxSize) {
         arr = new int[maxSize];
@@ -24,8 +27,8 @@ public class CircularQueue {
         if (isFull()) {
             System.out.println("Queue is full");
         } else {
-            if(isEmpty()){
-            front = 0;
+            if (isEmpty()) {
+                front = 0;
             }
             rear = (rear + 1) % maxSize;
             arr[rear] = val;
@@ -63,10 +66,9 @@ public class CircularQueue {
             do {
                 System.out.println(arr[i] + " ");
                 i = (i + 1) % maxSize;
-            } while ( i != (rear + 1) % maxSize);
+            } while (i != (rear + 1) % maxSize);
         }
     }
-
 
 
 }
