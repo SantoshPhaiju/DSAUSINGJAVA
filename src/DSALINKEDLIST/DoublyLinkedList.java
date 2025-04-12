@@ -17,7 +17,7 @@ public class DoublyLinkedList {
 
     public DoublyLinkedList() {
         head = null;
-        tail =  null;
+        tail = null;
         size = 0;
     }
 
@@ -50,14 +50,15 @@ public class DoublyLinkedList {
             return -1;
         } else {
             Node current = tail;
-            tail = tail.prev;
-            tail.next = null;
-            current.prev = null;
-            size--;
-            if (size == 0) {
+            if (size == 1) {
                 head = null;
                 tail = null;
+            } else {
+                tail = tail.prev;
+                tail.next = null;
+                current.prev = null;
             }
+            size--;
             return current.data;
         }
 
