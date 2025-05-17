@@ -59,6 +59,17 @@ public class BinaryTreeClass {
         System.out.print(root.data + " ");
     }
 
+    public static int countNodes (Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftNodes = countNodes(root.left);
+        int rightNodes = countNodes(root.right);
+
+        return leftNodes + rightNodes + 1;
+    }
+
     public static void main(String[] args) {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         BinaryTree tree = new BinaryTree();
@@ -66,12 +77,14 @@ public class BinaryTreeClass {
         System.out.println(root.data);
         System.out.println("PreOrder Traversal: ");
         preOrder(root);
-
+        System.out.println();
         System.out.println("InOrder Traversal: ");
         inOrder(root);
-
+        System.out.println();
         System.out.println("PostOrder Traversal: ");
         postOrder(root);
+        System.out.println();
+        System.out.println("Number of nodes: " + countNodes(root));
     }
 }
  
