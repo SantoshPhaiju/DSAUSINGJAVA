@@ -1,5 +1,8 @@
 package Searching;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class BinarySearch {
 
     public static int binarySearch(int[] arr, int key) {
@@ -23,6 +26,7 @@ public class BinarySearch {
 
         int[] data = {43, 24, 5, 64, 32, 33, 44 ,54, 19};
         int key = 33;
+        Arrays.sort(data);
 
         int result = binarySearch(data, key);
         System.out.println(result != -1 ? "Found at index: " + result : "Not found");
