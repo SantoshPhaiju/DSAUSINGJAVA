@@ -53,7 +53,7 @@ public class Graph {
                 }
             }
         }
-        System.out.println();
+        System.out.println(); 
     }
 
     public static void main(String[] args) {
