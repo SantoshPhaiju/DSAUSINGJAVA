@@ -8,6 +8,8 @@ public class Stack {
         return top == 0;
     }
 
+
+
     private boolean isFullInternal() {
         int stackSize = 10;
         return top == stackSize;
