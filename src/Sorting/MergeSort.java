@@ -4,9 +4,11 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void divide(int[] arr, int si, int ei) {
+        // O(nlog n)
         if(si >= ei) {
             return;
         }
+        // O(log n)
         int mid = si + (ei - si) / 2;
         divide(arr, si, mid);
         divide(arr, mid + 1, ei);
@@ -15,6 +17,7 @@ public class MergeSort {
     }
 
     public static void conquer(int[] arr, int si, int mid, int ei) {
+        // O(n)
         int[] merged = new int[ei - si + 1];
 
         int index1 = si;
