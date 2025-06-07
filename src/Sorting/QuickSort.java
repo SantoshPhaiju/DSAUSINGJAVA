@@ -35,5 +35,8 @@ public class QuickSort {
 
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
+        for (int j : arr) {
+            System.out.println(j);
+        }
     }
 }
