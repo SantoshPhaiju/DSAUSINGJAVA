@@ -23,8 +23,7 @@ public class QuickSort {
                 arr[j] = temp;
             }
         }
-        i++;
-        int temp = arr[i];
+        int temp = arr[i + 1];
         arr[i] = pivot;
         arr[high] = temp;
         return i;
